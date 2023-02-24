@@ -202,6 +202,7 @@ public class HelloSearchAttributes {
       DescribeWorkflowExecutionResponse resp =
           service.blockingStub().describeWorkflowExecution(request);
 
+      System.out.println(resp.getWorkflowExecutionInfo());
       // get all search attributes
       SearchAttributes searchAttributes = resp.getWorkflowExecutionInfo().getSearchAttributes();
       // Get the specific value of a keyword from the payload.
